@@ -948,8 +948,24 @@ header .icons #menu-bars {
 
 
 
+/* Light Dark */
+@media (prefers-color-scheme: test) {
 
-@media (prefers-color-scheme: notapply) {
+  @media (max-width: 450px) {
+    header .navbar{
+      background: #121212 !important;
+    }
+    header .navbar a{
+      color: var(--light-color);
+      background-color: #282828;
+    }
+    header .navbar a.active{
+      color: var(--mainColor) !important;
+      background-color: #121212;
+    }
+  }
+
+
   html {
     background-color: rgb(12, 12, 12) !important;
   }
