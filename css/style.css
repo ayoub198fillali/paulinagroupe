@@ -640,7 +640,7 @@ header .icons #menu-bars {
 .checkboxform {
   display: flex;
   justify-content: space-evenly;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
 }
 
 .checkboxitem{
