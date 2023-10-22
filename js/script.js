@@ -67,33 +67,35 @@ $("#favorite-pack").on("click", function (e) {
 $("#ContactForm").on("submit", function (e) {
   e.preventDefault();
   // CMT console.log("Sended");
-  let myCommand = [];
-  $(".item-label").each(function () {
-    myCommand.push($(this).html());
-  });
+  // let myCommand = [];
+  // $(".item-label").each(function () {
+  //   myCommand.push($(this).html());
+  // });
+
+
   // console.log(myCommand.join(", "));
   // https://mailtrap.io/blog/javascript-send-email/
-  $.getJSON("https://api.ipify.org?formawwt=json", function (data) {
-    emailjs.init("KAe5kfyvpRuOXbuIwwww"); //please encrypted user id for malicious attacks
-    // https://dashboard.emailjs.com/admin/templates/tvk9clb
-    let templateParams = {
-      from_name: $("#formeNom").val(),
-      commande: myCommand.join(", "),
-      from_num: $("#formeNumber").val(),
-      nbcommande: $("#formeCombien").val(),
-      msg: $("#formeMessage").val(),
-    };
+  // $.getJSON("https://api.ipify.org?formawwt=json", function (data) {
+  //   emailjs.init("KAe5kfyvpRuOXbuIwwww"); //please encrypted user id for malicious attacks
+  //   // https://dashboard.emailjs.com/admin/templates/tvk9clb
+  //   let templateParams = {
+  //     from_name: $("#formeNom").val(),
+  //     commande: myCommand.join(", "),
+  //     from_num: $("#formeNumber").val(),
+  //     nbcommande: $("#formeCombien").val(),
+  //     msg: $("#formeMessage").val(),
+  //   };
 
-    // console.log(templateParams);
+  //   // console.log(templateParams);
 
-    emailjs.send("service_zhki1yu", "template_wxi2e5g", templateParams).then(
-      function () {
-        myNotif("success", "Message envoyé", 1000);
-        $("#ContactForm")[0].reset();
-      },
-      function () {
-        myNotif("error", "Message non envoyé...", 1000);
-      }
-    );
-  });
+  //   emailjs.send("service_zhki1yu", "template_wxi2e5g", templateParams).then(
+  //     function () {
+  //       myNotif("success", "Message envoyé", 1000);
+  //       $("#ContactForm")[0].reset();
+  //     },
+  //     function () {
+  //       myNotif("error", "Message non envoyé...", 1000);
+  //     }
+  //   );
+  // });
 });
