@@ -10,7 +10,7 @@
     "page":
         {
             "titre": "Pauline Groupe",
-            "icon": "/images/L1.png"
+            "icon": "images/L1.png"
         },
 
 
@@ -52,7 +52,7 @@
     "AboutHeading": "À Propos de Nous",
     "AboutSubHeading": "Pourquoi Nous Choisir ?",
     "AboutContentTitle": "Votre destination gourmande sucrés et salés.",
-    "AboutContent": "<p>Chez <strong>PAULINA Groupe</strong>, nous sommes passionnés par la création de délices sucrés et salés <strong>FAITS MAISON</strong>. Situés à Athis-Mons, nous vous invitons à plonger dans notre monde gourmand, où chaque bouchée est une expérience unique. Notre mission est simple : apporter de la joie à travers des gâteaux délicieux. Que vous cherchiez le gâteau et La Décoration parfait et la décoration pour une occasion spéciale ou simplement pour satisfaire votre dent sucrée , nous avons ce qu'il vous faut. Mais nous ne nous arrêtons pas là. Notre magasin est également disponible pour rendre vos moments spéciaux encore plus doux, y compris la <strong>Décoration Évènementielle 100% Personalisée</strong>. Que ce soit un anniversaire, un mariage, ou toute autre célébration, nous sommes là pour créer Le Gâteau et La Décoration de vos rêves. Chez <strong>PAULINA Groupe</strong>, nous croyons que chaque gâteau devrait raconter une histoire. C'est pourquoi nous mettons tout en œuvre pour personnaliser chaque création selon vos désirs, y compris nos deux délices, <strong>SUCRÉS ET SALÉS</strong> !</p>",
+    "AboutContent": "<p>Chez <strong>PAULINA Groupe</strong>, nous sommes passionnés par la création de délices sucrés et salés <strong>FAITS MAISON</strong>. Situés à Athis-Mons, nous vous invitons à plonger dans notre monde gourmand, où chaque bouchée est une expérience unique. Notre mission est simple : apporter de la joie à travers des gâteaux délicieux. Que vous cherchiez le gâteau et La Décoration parfaite pour une occasion spéciale ou simplement pour satisfaire votre dent sucrée , nous avons ce qu'il vous faut. Mais nous ne nous arrêtons pas là. Notre magasin est également disponible pour rendre vos moments spéciaux encore plus doux, y compris la <strong>Décoration Évènementielle 100% Personalisée</strong>. Que ce soit un anniversaire, un mariage, ou toute autre célébration, nous sommes là pour créer Le Gâteau et La Décoration de vos rêves. Chez <strong>PAULINA Groupe</strong>, nous croyons que chaque gâteau devrait raconter une histoire. C'est pourquoi nous mettons tout en œuvre pour personnaliser chaque création selon vos désirs, y compris nos deux délices, <strong>SUCRÉS ET SALÉS</strong> !</p>",
     "logoAbout": "./images/L1.png",
     "imageAbout": "./images/about-img.png",
     

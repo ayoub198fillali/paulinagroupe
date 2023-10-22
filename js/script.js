@@ -59,6 +59,9 @@ $("#favorite-pack").on("click", function (e) {
 // }
 
 
+// emailSenderv2.pythonanywhere.com
+// frayfi@g.com
+
 
 // Submit --------------------------------------------------------------
 $("#ContactForm").on("submit", function (e) {

@@ -629,6 +629,42 @@ header .icons #menu-bars {
 }
 
 
+#ContactForm{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.checkboxform {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+}
+
+.checkboxitem{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.checkboxitem label{
+  text-wrap: nowrap;
+  padding: 1rem;
+  font-size: 1.6rem;
+}
+
+.checkboxitem input[type="checkbox"]{
+  margin: 0 !important;
+}
+
+.checkboxitem input[type="radio"]{
+  margin: 0 !important;
+  font-size: 10px;
+  width: auto !important;
+}
+
 /* ****** */
 /* Footer */
 /* ****** */
