@@ -8,6 +8,7 @@
   /* --mainColor: #ffb624; */
   /* --mainColor: #f6d06e; */
   --mainColor: #d5a70a;
+  --secondColor: #d5bb8a;
   --black: #5d4a1f;
   --light-color: #666;
   --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
@@ -68,6 +69,26 @@ html {
   scroll-padding-top: 5.5rem;
   scroll-behavior: smooth;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 section {
   padding: 15px 7%;
@@ -915,3 +936,107 @@ header .icons #menu-bars {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background-color: rgb(12, 12, 12) !important;
+  }
+  
+  header{
+    background-color: #121212 !important;
+  }
+  .swal2-popup.swal2-toast{
+    color: whitesmoke !important;
+    background-color: #121212 !important;
+  }
+
+  .footer,.home{
+    background: #282828 !important;
+  }
+
+  .order form, .cakes:nth-child(even) {
+    background: #121212 !important;
+  }
+  .order form{
+    color: white;
+  }
+
+  .cakes:nth-child(odd) {
+    background: black !important;
+  }
+
+  header .logo{
+    color: var(--secondColor) !important;
+  }
+
+  header .icons i, header .icons a, .home .home-slider .slide .content h3{
+    color: var(--secondColor) !important;
+  }
+
+  header .icons i, header .icons a, .about .icons{
+    background: #282828 !important;
+  }
+
+  header .navbar a,.home .home-slider .slide .content p{
+    color: #c1c1c1 !important;
+  }
+
+
+  .heading, .about .row .content h3, .about .icons span{
+    color: var(--secondColor) !important;
+  }
+  
+  .about .row .content p{
+    color: #c1c1c1 !important;
+  }
+  
+  .cakesDescription{
+    color: white !important;
+  }
+
+  .widget-container2 h2, .elementor-icon-list-text,.prev, .next,.tarifsMin{
+    color: var(--secondColor) !important;
+  }
+
+  .tarifsLeftRight .tarifsLeft{
+    color: #c1c1c1 !important;
+  }
+  .tarifsLeftRight .tarifsRight{
+    color: white !important;
+  }
+
+  .order form .input span{
+    color: #c1c1c1  !important;
+  }
+
+  .order form .inputBox .input input, .order form .inputBox .input textarea, .order form .inputBox .input select,input[type="checkbox"],input[type="radio"]{
+    color: var(--secondColor) !important;
+    background: #282828 !important;
+    accent-color: var(--secondColor) !important;
+    color-scheme: dark !important;
+  }
+
+  .footer .box-container .box h3{
+    color: var(--secondColor) !important;
+  }
+
+  .footer .box-container .box a{
+    color: #c1c1c1  !important;
+  }
+
+  .footer .credit{
+    color: var(--secondColor) !important;
+  }
+}

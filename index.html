@@ -39,6 +39,7 @@
       <div class="icons">
         <i class="fas fa-bars" id="menu-bars"></i>
         <a href="#" class="fas fa-heart" id="favorite-pack"></a>
+        <a class="fas fa-sun" id="darkmode"></a>
       </div>
     </header>
     <!-- header section ends-->
@@ -611,7 +612,7 @@
           <div class="row rowgrp">
             <div class="imagegrp">                
               <!-- Portfolio section starts  =>  border-radius: 15px;border: var(--mainColor) 2px dashed; -->
-              <section class="containerPort" id= containerPort${image.replace(" ","")} attr-img="${image}" style="background-color: white; ">  
+              <section class="containerPort" id= containerPort${image.replace(" ","")} attr-img="${image}" style="background-color: transparent; ">  
                 <!-- FROM IMGES FETCHER -->
               </section>
               <!-- Portfolio section ends -->
@@ -889,6 +890,10 @@
       });
     }
     </script>
+
+
+    <style id="darkmodestyle"></style>
+
 
   </body>
 </html>
