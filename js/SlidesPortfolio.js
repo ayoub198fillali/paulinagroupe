@@ -38,7 +38,7 @@ function currentSlide(id,n) {
 
 
 function fetchImages() {
-  let Local = true;
+  let Local = false;
 
   $(".containerPort").each(function () {
     let id = $(this).attr("id");
