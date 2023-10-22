@@ -949,7 +949,7 @@ header .icons #menu-bars {
 
 
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: notapply) {
   html {
     background-color: rgb(12, 12, 12) !important;
   }
