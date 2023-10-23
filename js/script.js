@@ -85,6 +85,8 @@ $("#darkmode").on("click", function (e) {
 // Submit --------------------------------------------------------------
 $("#ContactForm").on("submit", function (e) {
   e.preventDefault();
+
+  myNotif("error", "Pas Encore...", 1000);
   // CMT console.log("Sended");
   // let myCommand = [];
   // $(".item-label").each(function () {

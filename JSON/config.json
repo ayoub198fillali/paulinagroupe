@@ -24,7 +24,7 @@
         "tarifs",
         "order"
     ],
-    "TimeSliderHome": 105000,
+    "TimeSliderHome": 5000,
     "SpecialTitle": "Notre Gâteau Spécial",
     "SpecialTitleFont": "",
     "SliderProducts": [
