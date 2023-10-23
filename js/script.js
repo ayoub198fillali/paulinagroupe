@@ -43,27 +43,35 @@ $("#favorite-pack").on("click", function (e) {
   );
 });
 
+
 $("#darkmode").on("click", function (e) {
   e.preventDefault();
 
   if(!$("#darkmodestyle").html().length){
-    $("#darkmodestyle").html(`
-    @media (max-width:450px){header .navbar{background:#121212!important}header .navbar a{color:var(--light-color);background-color:#282828}header .navbar a.active{color:var(--mainColor)!important;background-color:#121212}}html{background-color:#0c0c0c!important}.swal2-popup.swal2-toast,header{background-color:#121212!important}.swal2-popup.swal2-toast{color:#f5f5f5!important}.about .icons,.footer,.home,header .icons a,header .icons i{background:#282828!important}.cakes:nth-child(2n),.order form{background:#121212!important}.order form{color:#fff}.cakes:nth-child(odd){background:#000!important}.about .icons span,.about .row .content h3,.elementor-icon-list-text,.footer .box-container .box h3,.footer .credit,.heading,.home .home-slider .slide .content h3,.next,.prev,.tarifsMin,.widget-container2 h2,header .icons a,header .icons i,header .logo{color:var(--secondColor)!important}.about .row .content p,.footer .box-container .box a,.home .home-slider .slide .content p,.order form .input span,.tarifsLeftRight .tarifsLeft,header .navbar a{color:#c1c1c1!important}.cakesDescription,.tarifsLeftRight .tarifsRight{color:#fff!important}.order form .inputBox .input input,.order form .inputBox .input select,.order form .inputBox .input textarea,input[type=checkbox],input[type=radio]{color:var(--secondColor)!important;background:#282828!important;accent-color:var(--secondColor)!important;color-scheme:dark!important}    `)
-    $("#darkmode").toggleClass("fa-moon");
-    $("#darkmode").toggleClass("fa-sun");
-    myNotif("info",`<p style="text-align:justify; font-size:15px" >Mode sombre activé !</p>`,1000);
+    $.cookie('mode', 'dark');
+    theme("dark")
   }
   else{
-    $("#darkmodestyle").html("")
-    $("#darkmode").toggleClass("fa-moon");
-    $("#darkmode").toggleClass("fa-sun");
-    myNotif("info",`<p style="text-align:justify; font-size:15px" >Mode sombre désactivé !</p>`,1000);
+    $.cookie('mode', 'light');
+    theme("light")
   }
 
 });
 
-
-
+function theme(mode){
+  if (mode == "dark"){
+    $("#darkmodestyle").html(`
+    @media (max-width:450px){header .navbar{background:#121212!important}header .navbar a{color:var(--light-color);background-color:#282828}header .navbar a.active{color:var(--mainColor)!important;background-color:#121212}}html{background-color:#0c0c0c!important}.swal2-popup.swal2-toast,header{background-color:#121212!important}.swal2-popup.swal2-toast{color:#f5f5f5!important}.about .icons,.footer,.home,header .icons a,header .icons i{background:#282828!important}.cakes:nth-child(2n),.order form{background:#121212!important}.order form{color:#fff}.cakes:nth-child(odd){background:#000!important}.about .icons span,.about .row .content h3,.elementor-icon-list-text,.footer .box-container .box h3,.footer .credit,.heading,.home .home-slider .slide .content h3,.next,.prev,.tarifsMin,.widget-container2 h2,header .icons a,header .icons i,header .logo{color:var(--secondColor)!important}.about .row .content p,.footer .box-container .box a,.home .home-slider .slide .content p,.order form .input span,.tarifsLeftRight .tarifsLeft,header .navbar a{color:#c1c1c1!important}.cakesDescription,.tarifsLeftRight .tarifsRight{color:#fff!important}.order form .inputBox .input input,.order form .inputBox .input select,.order form .inputBox .input textarea,input[type=checkbox],input[type=radio]{color:var(--secondColor)!important;background:#282828!important;accent-color:var(--secondColor)!important;color-scheme:dark!important}    `)
+    $("#darkmode").addClass("fa-moon");
+    $("#darkmode").removeClass("fa-sun");
+    myNotif("info",`<p style="text-align:justify; font-size:15px" >Mode sombre activé !</p>`,1000);
+  }else{
+    $("#darkmodestyle").html("")
+    $("#darkmode").removeClass("fa-moon");
+    $("#darkmode").addClass("fa-sun");
+    myNotif("info",`<p style="text-align:justify; font-size:15px" >Mode sombre désactivé !</p>`,1000);
+  }
+}
 
 
 // Maybe Nkhdmha f Commander au lieu de tarifs

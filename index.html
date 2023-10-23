@@ -338,6 +338,8 @@
     <!--  -->
 
     <script src="js/Jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
     <script src="js/sweetalert2.min.js"></script>
     <!-- CMT <script src="js/email.min.js"></script> -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -370,6 +372,8 @@
           console.log(`Reason: ${reason}`);
         } finally {
           console.log(`Done`);
+
+          theme($.cookie('mode'))
 
           configPage();
           navConfig();
@@ -718,7 +722,7 @@
           `
         }
 
-        console.log(tarifsCode)
+        // console.log(tarifsCode)
 
         $(`#${targetSec.replace(" ","_")}`).html(itemsCode)
 
@@ -780,7 +784,7 @@
 
             const regex2 = /\s*(Part|Pièce)/;
             let match = tarifsCode[Object.keys(tarifsCode)[i]].minimum.match(regex2);
-            console.log(match)
+            // console.log(match)
             match = match ? match[0] : "--"
 
             thisCode += `
