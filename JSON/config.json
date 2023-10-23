@@ -72,6 +72,7 @@
         "cakes": [
             {
                 "title": "- Layer Cake -",
+                "info":"Pour quelle occasion ? Autre Informations...",
                 "description": "Découvrez l'univers délicieux du Layer Cake, un gâteau à étages exquis !\n\nNos créations sont composées de multiples couches de biscuit moelleux, soigneusement intercalées avec des garnitures crémeuses. Chaque gâteau est ensuite magnifiquement décoré avec une couche de ganache, de crème au beurre meringuée ou même de pâte à sucre, selon votre préférence.\n\nLe Layer Cake incarne la créativité en pâtisserie. C'est une toile vierge où chaque couche raconte une histoire gourmande. Laissez libre cours à votre imagination et personnalisez votre gâteau avec des saveurs uniques.\n\nExplorez notre gamme de saveurs et parcourez les créations de notre chef pâtissière pour trouver l'inspiration. Chocolat, vanille, fruits exotiques et bien plus encore - le choix vous appartient !",
                 "image": "LayerCake",
                 "options": {
@@ -106,6 +107,7 @@
             },
             {
                 "title": "- Wedding Cake -",
+                "info":"Prénoms des mariés ? Autre Informations...",
                 "description": "Découvrez l'élégance et la saveur inégalées de notre Wedding Cake, un gâteau d'exception pour des moments inoubliables !\n\nNotre Wedding Cake est une œuvre d'art sucrée composée de plusieurs étages de biscuit moelleux et de délicieuses garnitures. Chaque gâteau est méticuleusement décoré avec une touche de ganache, de crème au beurre meringuée ou même de pâte à sucre, selon vos préférences.\n\nLe Wedding Cake incarne la sophistication et la beauté dans le monde de la pâtisserie. C'est bien plus qu'un gâteau, c'est le symbole d'une journée de célébration et d'amour.\n\nExplorez notre gamme de saveurs et choisissez la combinaison qui vous ravira. Que ce soit classique, moderne ou personnalisé, notre chef pâtissière créera un Wedding Cake qui reflétera l'unicité de votre mariage. Chaque tranche est une promesse de délices à partager avec vos proches lors de cette journée spéciale !",
                 "image": "WadingCake",
                 "options": {
@@ -131,6 +133,7 @@
             },
             {
                 "title": "- Number Cake -",
+                "info":"Quel chiffre et/ou lettre ?  Autre Informations...",
                 "description": "Le Number Cake, également connu sous le nom d'Alphabet Cake ou de Letter Cake, est un gâteau d'origine américaine. \n\nSouvent conçu sous la forme de chiffres, il est recouvert de deux couches de garniture légère et crémeuse, agrémenté de décorations telles que meringues, macarons, friandises, fruits frais, et bien plus encore.",
                 "image": "NumberCake",
                 "options": {
@@ -161,6 +164,7 @@
             },
             {
                 "title": "- Macarons -",
+                "info":"Votre Text Ici...",
                 "description": "Les macarons sont de délicieuses pâtisseries françaises légères et croquantes à l'extérieur, avec un cœur moelleux et parfumé.\n\nCes petits trésors sucrés sont disponibles dans une variété de saveurs exquises, des classiques comme la vanille et le chocolat aux créations plus audacieuses, offrant une expérience gustative raffinée et gourmande.",
                 "image": "Macarons",
                 "options": {
@@ -194,6 +198,7 @@
         "cakes": [
             {
                 "title": "- Cupcake -",
+                "info":"Votre Text Ici...",
                 "description": "Les cupcakes sont de petites douceurs pâtissières qui charment par leur taille et enchantent par leur goût. \n\nCes petits gâteaux moelleux sont couronnés de délicieuses crèmes et garnitures variées, permettant une infinité de combinaisons de saveurs. \n\nLes cupcakes sont parfaits pour satisfaire votre gourmandise, que ce soit pour une occasion spéciale, un petit plaisir ou simplement pour égayer votre journée.",
                 "image": "Cupcake",
                 "options": {
@@ -221,6 +226,7 @@
             },
             {
                 "title": "- Magnum / Popsicle Cake -",
+                "info":"Votre Text Ici...",
                 "description": "Le Magnum / Popsicle Cake est une création glacée irrésistible. \n\nIl marie l'onctuosité d'un Magnum ou d'un Popsicle avec la richesse d'un gâteau. \n\nChaque bouchée est une explosion de saveurs glacées et de textures moelleuses, créant une expérience unique pour les amateurs de glace et de pâtisserie. \n\nLaissez-vous tenter par ce mariage délicieux de la glace et du gâteau pour ravir vos papilles lors d'occasions spéciales ou pour simplement savourer un dessert exquis à tout moment.",
                 "image": "MagnumPopsicleCake",
                 "options": {
@@ -242,6 +248,7 @@
             },
             {
                 "title": "- Popcake -",
+                "info":"Votre Text Ici...",
                 "description": "Le popcake ou Cake pop est un petit gâteau en forme de sucette. Il est composé d’un gâteau moelleux mélangé à une crème, une ganache ou de la pâte à tartiner le tout recouvert d’une fine coque de chocolat. \n\nIl fait partie des produits de sweet table et peut être décoré pour coller au thème de votre choix.",
                 "image": "Popcake",
                 "options": {
@@ -263,6 +270,7 @@
             },
             {
                 "title": "- Biscuits / Sablé personnalisés -",
+                "info":"Votre Text Ici...",
                 "description": "Découvrez nos biscuits sablés personnalisés, de véritables créations comestibles. \n\nChaque biscuit est conçu avec soin et décoré selon vos préférences. Que ce soit pour des occasions spéciales, des cadeaux uniques ou tout simplement pour satisfaire votre envie de douceurs personnalisées, nos biscuits sablés allient saveur et créativité. \n\nExprimez-vous à travers des motifs, des messages et des designs uniques qui rendront chaque bouchée mémorable. Plongez dans l'univers des biscuits qui sont à la fois délicieux et adaptés à vos goûts.",
                 "image": "BiscuitsSablepersonnalises",
                 "options": {
@@ -283,6 +291,7 @@
             },
             {
                 "title": "- Les Cookies -",
+                "info":"Votre Text Ici...",
                 "description": "Nos cookies sont une véritable célébration de la gourmandise. \n\nChaque bouchée est un voyage de saveurs et de textures, avec une croûte croustillante à l'extérieur et un cœur moelleux à l'intérieur. \n\nNos cookies sont confectionnés avec des ingrédients de qualité et une touche d'amour. \n\nQue vous les dégustiez pour satisfaire une envie soudaine de sucreries ou pour accompagner un moment de détente, nos cookies sont l'incarnation du plaisir sucré. \n\nDécouvrez un monde de saveurs avec nos délicieux cookies, des classiques intemporels aux créations plus audacieuses.",
                 "image": "Cookies",
                 "options": {
@@ -301,6 +310,7 @@
             },
             {
                 "title": "- Les verrines sucrées -",
+                "info":"Votre Text Ici...",
                 "description": "Les verrines sucrées sont de délicieuses créations gourmandes qui éveillent les papilles. \n\nChaque verrine est une œuvre d'art comestible, superposant des couches de saveurs sucrées pour une expérience gustative inoubliable. \n\nQue ce soit pour un dessert élégant, un festin sucré ou simplement pour satisfaire une envie de douceur, les verrines sucrées offrent une variété de textures et de goûts qui raviront vos sens. \n\nDécouvrez l'harmonie des ingrédients qui s'entremêlent dans chaque verrine, créant un mélange parfait de saveurs sucrées pour votre plus grand plaisir.",
                 "image": "VerrinesSucrees",
                 "options": {

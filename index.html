@@ -149,26 +149,22 @@
 
           <div class="input">
             <span>Nom :<p style="color: red; display: inline">*</p></span>
-            <input id="formeNom" type="text" placeholder="Nom de Famille" maxlength="60" required />
+            <input id="formeNom" type="text" name="Nom :" placeholder="Nom de Famille" maxlength="60" required />
           </div>
 
           <div class="input">
             <span>Prénom :<p style="color: red; display: inline">*</p></span>
-            <input id="formePrenom" type="text" placeholder="Prénom" maxlength="60" required />
+            <input id="formePrenom" type="text" name="Prénom :" placeholder="Prénom" maxlength="60" required />
           </div>
 
           <div class="input">
-            <span>Téléphone :
-              <p style="color: red; display: inline">*</p>
-            </span>
-            <input id="formeNumber" type="tel" placeholder="+33 6 99.." maxlength="15" minlength="10" required />
+            <span>Téléphone :<p style="color: red; display: inline">*</p></span>
+            <input id="formeNumber" type="tel" name="Téléphone :" placeholder="+33 6 99.." maxlength="15" minlength="10" required />
           </div>
 
           <div class="input">
-            <span>Email :
-              <p style="color: red; display: inline">*</p>
-            </span>
-            <input id="formeEmail" type="email" placeholder="Votre Email" maxlength="50" minlength="4" required />
+            <span>Email :<p style="color: red; display: inline">*</p></span>
+            <input id="formeEmail" type="email" name="Email :" placeholder="Votre Email" maxlength="50" minlength="4" required />
           </div>
 
         </div>
@@ -179,29 +175,13 @@
             <span>Que souhaitez-vous commander ?
               <p style="color: red; display: inline">*</p>
             </span>
-            <div class="checkboxform">
-              <div class="checkboxitem">
-                <input type="checkbox" id="cakeDesign" name="cakes" value="Cake Design">
-                <label for="cakeDesign">Cake Design</label>
-              </div>
-              <div class="checkboxitem">
-                <input type="checkbox" id="weddingCake" name="cakes" value="Wedding Cake">
-                <label for="weddingCake">Wedding Cake</label>
-              </div>
-              <div class="checkboxitem">
-                <input type="checkbox" id="numberCake" name="cakes" value="Number Cake">
-                <label for="numberCake">Number Cake</label>
-              </div>
-              <div class="checkboxitem">
-                <input type="checkbox" id="entremet" name="cakes" value="Entremet">
-                <label for="entremet">Entremet</label>
-              </div>
-              <div class="checkboxitem">
-                <input type="checkbox" id="mignardises" name="cakes" value="Mignardises">
-                <label for="mignardises">Mignardises</label>
-              </div>
+            <div id="checkboxformcakes" class="checkboxform">
             </div>
+
           </div>
+        </div>
+
+        <div id="cakesForm" class="inputBox">          
         </div>
 
         <!-- A remplir -->
@@ -209,12 +189,12 @@
         <div class="inputBox">
           <div class="input">
             <span>Pour quelle date ? <p style="color: red; display: inline">*</p></span>
-            <input id="dateInput" type="date" placeholder="jj/mm/aaaa" required />
+            <input id="dateInput" type="date" name="Date :" placeholder="jj/mm/aaaa" required />
           </div>
 
           <div class="input">
             <span>Souhaitez-vous être livré ? <p style="color: red; display: inline">*</p></span>
-            <select id="livraisonSelect" required>
+            <select name="Laivraison :" id="livraisonSelect" required>
               <option value="non" selected>Non</option>
               <option value="oui">Oui</option>
             </select>
@@ -223,16 +203,16 @@
           <div class="input">
             <span>Êtes-vous un particulier ou une entreprise ? <p style="color: red; display: inline">*</p></span>
             <div class="checkboxitem">
-              <input type="radio" id="particulierRadio" name="entrepriseType" value="particulier" required>
+              <input name="C'est :" type="radio" value="Un Particulier" id="particulierRadio" required>
               <label for="particulierRadio">Particulier</label>
-              <input type="radio" id="entrepriseRadio" name="entrepriseType" value="entreprise" required>
+              <input name="C'est :" type="radio" value="Une Entreprise" id="entrepriseRadio" required>
               <label for="entrepriseRadio">Entreprise</label>
             </div>
           </div>
 
           <div class="input">
             <span>Avez-vous des allergies alimentaires ? <p style="color: red; display: inline">*</p></span>
-            <input type="text" id="allergiesInput" name="allergies" required placeholder="Exemple : Noix, Gluten au lactose...">
+            <input type="text" id="allergiesInput" name="Allergies alimentaires :" required placeholder="Exemple : Noix, Gluten au lactose...">
           </div>
                   
         </div>
@@ -240,50 +220,21 @@
         <div class="inputBox">
           <div class="input checkboxitem" style="flex-direction: column; align-items: flex-start;">
             <div class="checkboxitem"> 
-              <input type="checkbox" id="conditionsGenerales" name="conditionsGenerales" required>
+              <input type="checkbox" id="conditionsGenerales" required>
               <label for="conditionsGenerales">J'ai lu et j'accepte <a href="#" style="color: var(--mainColor); text-decoration: underline;">les conditions générales</a></label>
             </div>
             <div class="checkboxitem">
-              <input type="checkbox" id="mentionsLegales" name="mentionsLegales" required>
+              <input type="checkbox" id="mentionsLegales" required>
               <label for="mentionsLegales">J'ai lu et j'accepte <a href="#" style="color: var(--mainColor); text-decoration: underline;">les mentions légales</a></label>
             </div>
           </div>
         </div>
 
-          <!-- <div class="input">
-            <span>Votre commande </span>
-            <select name="multipleselect" id="multipleselect" multiple></select>
-          </div> -->
-
-
-
-          <!--           
-        <div class="inputBox">
-          <div class="input">
-            <span>combien</span>
-            <input id="formeCombien" type="number" placeholder="Combien de commandes" min="0" max="10000" />
-          </div>
+        <!-- <div class="input">
+          <span>Votre commande </span>
+          <select name="multipleselect" id="multipleselect" multiple></select>
         </div> -->
 
-        <!-- 
-        <div class="inputBox">
-          <div class="input" style="width: 100%">
-            <span
-              >votre message
-              <p style="color: red; display: inline">*</p></span
-            >
-            <textarea
-              name=""
-              placeholder="Entrez votre message"
-              id="formeMessage"
-              cols="60"
-              rows="10"
-              style="width: 100%"
-              maxlength="900"
-              required
-            ></textarea>
-          </div>
-        </div> -->
         <input type="submit" value="Commander" class="btn" />
       </form>
     </section>
@@ -391,6 +342,9 @@
           addTarif("tarifs");
 
           // configureMultiSelect();
+          console.log("StartOrder")
+          configOrder();
+          console.log("EndOrder")
 
           configureFooter();
           configureToTop();
@@ -578,6 +532,7 @@
         for (let i = 0; i < myAllConfigs[targetSec].cakes.length; i++) {
 
           const title = myAllConfigs[targetSec].cakes[i].title;
+          const info = myAllConfigs[targetSec].cakes[i].info;
           const description = myAllConfigs[targetSec].cakes[i].description;
           const image = myAllConfigs[targetSec].cakes[i].image;
           const saveurs = myAllConfigs[targetSec].cakes[i].options.saveurs;
@@ -595,7 +550,10 @@
           // Assign values to tarifsCode using title as the key
           tarifsCode[title] = {
             title: title,
+            info: info,
             minimum: minimum,
+            saveurs:saveurs,
+            decorations: decorations,
             details: [],
             prices: []
           };
@@ -616,7 +574,7 @@
           <div class="row rowgrp">
             <div class="imagegrp">                
               <!-- Portfolio section starts  =>  border-radius: 15px;border: var(--mainColor) 2px dashed; -->
-              <section class="containerPort" id= containerPort${image.replace(" ","")} attr-img="${image}" style="background-color: transparent; ">  
+              <section class="containerPort" id= containerPort${image.replace(/ /g, "")} attr-img="${image}" style="background-color: transparent; ">  
                 <!-- FROM IMGES FETCHER -->
               </section>
               <!-- Portfolio section ends -->
@@ -811,7 +769,101 @@
         MultiSelectTag("multipleselect");
       }
 
-      function aa() {
+      function configOrder() {
+        let checkboxcakesCode = ``;
+        let cakesFormCode = ``;
+        
+        let len = Object.keys(tarifsCode).length;
+        for(let i=0; i < len; i++){
+          
+          console.log(`${Object.keys(tarifsCode)[i]}`)
+          var thisId = Object.keys(tarifsCode)[i].replace(/ /g, "").replace("/","").replace(/-/g,"")
+          checkboxcakesCode+=`
+          <div class="checkboxitem">
+            <input type="checkbox" id="${thisId}" name="Commandes :" value="${Object.keys(tarifsCode)[i].replace(/-/g,"")}">
+            <label for="${thisId}">${Object.keys(tarifsCode)[i].replace(/-/g,"")}</label>
+          </div>
+          `
+          cakesFormCode+=`        
+          <div id="${thisId}GFORM" style="width: 100%; display:none; tabindex="-1"; padding-bottom: 15px" >
+            <h1 style="color: var(--mainColor); font-size: 1.7rem;">Votre ${Object.keys(tarifsCode)[i].replace(/-/g,"")}:</h1>
+            <div class = "grpcakeinputs">
+            `
+          if(tarifsCode[Object.keys(tarifsCode)[i]].saveurs)
+          {
+            cakesFormCode+=`        
+            <div class="input">
+              <span>Les saveurs : <p style="color: red; display: inline">*</p></span>
+              <select id= "saveurs${thisId}" name="Les saveurs de ${Object.keys(tarifsCode)[i].replace(/-/g,"")}:">`
+
+              tarifsCode[Object.keys(tarifsCode)[i]].saveurs.forEach(item => {
+                cakesFormCode+=`    
+                <option value="${item}">${item}</option>
+                ` 
+              })
+              cakesFormCode+=`        
+              </select>
+            </div>
+              `
+          }
+          if(tarifsCode[Object.keys(tarifsCode)[i]].decorations)
+          {
+            cakesFormCode+=`        
+            <div class="input">
+              <span>Les décorations :<p style="color: red; display: inline">*</p></span>
+              <select id = "deco${thisId}" name="Les décorations de ${Object.keys(tarifsCode)[i].replace(/-/g,"")}:">`
+
+              tarifsCode[Object.keys(tarifsCode)[i]].decorations.forEach(item => {
+                cakesFormCode+=`    
+                <option value="${item}">${item}</option>
+                ` 
+              })
+              cakesFormCode+=`        
+              </select>
+            </div>
+              `
+          }
+
+          var thismin = tarifsCode[Object.keys(tarifsCode)[i]].minimum.split(" ")[0];
+          var one = tarifsCode[Object.keys(tarifsCode)[i]].minimum.split(" ")[1];
+          if(thismin != 0)
+          cakesFormCode+=`        
+            <div class="input">
+              <span>Nombre de ${one} ? <p style="color: red; display: inline">*</p></span>
+              <input id="nombre${thisId}" type="number" name="Minimum de commande pour ${Object.keys(tarifsCode)[i].replace(/-/g,"")}:" min=${thismin}  placeholder="minimum de commande ${thismin}...">
+            </div>
+            `
+
+          cakesFormCode+=`     
+            <div class="input">
+              <span>Commentaires :</span>
+              <textarea rows="2" name="Commentaire de ${Object.keys(tarifsCode)[i].replace(/-/g,"")}:" placeholder="${tarifsCode[Object.keys(tarifsCode)[i]].info}"></textarea>
+            </div>
+          </div>
+          </div>
+
+          `
+        }
+
+        $("#checkboxformcakes").append(`${checkboxcakesCode}`)
+        $("#cakesForm").append(`${cakesFormCode}`)
+
+        $("#checkboxformcakes input[type=checkbox]").on("change", function() {
+          if ($(this).is(":checked")) {
+            // Checkbox is checked
+            // console.log("Checkbox with ID " + this.id + " is checked");
+            $(`#${this.id}GFORM`).show("slow");
+            $(`#saveurs${this.id},#deco${this.id},#nombre${this.id}`).prop("required", true)
+          } else {
+            // Checkbox is unchecked
+            // console.log("Checkbox with ID " + this.id + " is unchecked");
+            $(`#${this.id}GFORM`).hide("slow");
+            $(`#saveurs${this.id},#deco${this.id},#nombre${this.id}`).prop("required", false)          
+          }
+      });
+
+
+
       }
     </script>
 

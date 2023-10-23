@@ -89,18 +89,32 @@ function theme(mode){
 // emailSenderv2.pythonanywhere.com
 // frayfi@g.com
 
-
 // Submit --------------------------------------------------------------
 $("#ContactForm").on("submit", function (e) {
   e.preventDefault();
 
   myNotif("error", "Pas Encore...", 1000);
   // CMT console.log("Sended");
-  // let myCommand = [];
-  // $(".item-label").each(function () {
-  //   myCommand.push($(this).html());
-  // });
-
+  
+  $("#ContactForm").find(':input').each(function() {
+    var field = $(this);
+    if (field.is(":visible") && field.attr("name")) {
+        if (field.is(":radio")) {
+            if (field.is(":checked")) {
+                console.log("=> " + field.attr("name"));
+                console.log(field.val());
+            }
+        } else if (field.is(":checkbox")) {
+            if (field.is(":checked")) {
+                console.log("=> " + field.attr("name"));
+                console.log(field.val());
+            }
+        } else {
+            console.log("=> " + field.attr("name"));
+            console.log(field.val());
+        }
+    }
+  });
 
   // console.log(myCommand.join(", "));
   // https://mailtrap.io/blog/javascript-send-email/
