@@ -125,15 +125,15 @@ $("#ContactForm").on("submit", function (e) {
   });
 
   msgSend += `<body><h3 style="text-align: center; color: #d5a70a;  font-size: 18px;">Commande de ${commande["Nom :"]} ${commande["Prénom :"]}</span></h3>
-  <p style=" font-size: 16px;">C'est : <span style="color: #d5a70a;">${commande["C'est :"]}</span></p>
-  <p style=" font-size: 16px;">Le numéro de téléphone est : <span style="color: #d5a70a;">${commande["Téléphone :"]}</span></p>
-  <p style=" font-size: 16px;">L'Email : <span style="color: #d5a70a;">${commande["Email :"]}</span></p>
-  <p style=" font-size: 16px;">Fait le : <span style="color: #d5a70a;">${new Date().toLocaleString()}</span></p>
-  <p style=" font-size: 16px;">C'est pour le : <span style="color: #d5a70a;">${commande["Date :"]}</span></p>
-  <p style=" font-size: 16px;">Livraison : <span style="color: #d5a70a;">${$("#livraisonSelect").val()}</span></p>
+  <p style=" font-size: 16px; color: black;">C'est : <span style="color: #d5a70a;">${commande["C'est :"]}</span></p>
+  <p style=" font-size: 16px; color: black;">Le numéro de téléphone est : <span style="color: #d5a70a;">${commande["Téléphone :"]}</span></p>
+  <p style=" font-size: 16px; color: black;">L'Email : <span style="color: #d5a70a;">${commande["Email :"]}</span></p>
+  <p style=" font-size: 16px; color: black;">Fait le : <span style="color: #d5a70a;">${new Date().toLocaleString()}</span></p>
+  <p style=" font-size: 16px; color: black;">C'est pour le : <span style="color: #d5a70a;">${commande["Date :"]}</span></p>
+  <p style=" font-size: 16px; color: black;">Livraison : <span style="color: #d5a70a;">${$("#livraisonSelect").val()}</span></p>
 
-  <p style=" font-size: 16px;">Allergies alimentaires : <span style="color: #d5a70a;">${commande["Allergies alimentaires :"]}</span></p>
-  <p style=" font-size: 16px;">Il y a <span style="color: #d5a70a;">${commande["Commandes :"].length} Commandes :</span></p>
+  <p style=" font-size: 16px; color: black;">Allergies alimentaires : <span style="color: #d5a70a;">${commande["Allergies alimentaires :"]}</span></p>
+  <p style=" font-size: 16px; color: black;">Il y a <span style="color: #d5a70a;">${commande["Commandes :"].length} Commandes :</span></p>
 `
 
   commande["Commandes :"].forEach(cake => {
@@ -144,7 +144,7 @@ $("#ContactForm").on("submit", function (e) {
     Object.keys(commande).forEach(title => {
       // console.log(cake + "  vs  " + title )
       if(title.includes(cake)){
-        msgSend += `<p style=" font-size: 16px;">${title} <span style="color: #d5a70a;">${commande[title]}</span></p>`
+        msgSend += `<p style=" font-size: 16px; color: black;">${title} <span style="color: #d5a70a;">${commande[title]}</span></p>`
         // console.log(`<p>${title}${commande[title]}</p>`)
       }
     });
@@ -154,6 +154,7 @@ $("#ContactForm").on("submit", function (e) {
 
   // emailSenderv2.pythonanywhere.com
   // frayfi@g.com
+  // https://www.pythonanywhere.com/user/emailSenderv2/files/home/emailSenderv2/API/emailsender.py?edit
   // Define the API endpoint URL
   var api_url = "https://emailsenderv2.pythonanywhere.com/send-email";  // Replace with the actual URL of your Flask API endpoint
 
@@ -184,34 +185,13 @@ $("#ContactForm").on("submit", function (e) {
       }
   });
 
-
-
-
-
-
-  // console.log(myCommand.join(", "));
-  // https://mailtrap.io/blog/javascript-send-email/
-  // $.getJSON("https://api.ipify.org?formawwt=json", function (data) {
-  //   emailjs.init("KAe5kfyvpRuOXbuIwwww"); //please encrypted user id for malicious attacks
-  //   // https://dashboard.emailjs.com/admin/templates/tvk9clb
-  //   let templateParams = {
-  //     from_name: $("#formeNom").val(),
-  //     commande: myCommand.join(", "),
-  //     from_num: $("#formeNumber").val(),
-  //     nbcommande: $("#formeCombien").val(),
-  //     msg: $("#formeMessage").val(),
-  //   };
-
-  //   // console.log(templateParams);
-
-  //   emailjs.send("service_zhki1yu", "template_wxi2e5g", templateParams).then(
-  //     function () {
-  //       myNotif("success", "Message envoyé", 1000);
-  //       $("#ContactForm")[0].reset();
-  //     },
-  //     function () {
-  //       myNotif("error", "Message non envoyé...", 1000);
-  //     }
-  //   );
-  // });
+  $("#ContactForm")[0].reset();
+  // Create a new Date object
+  var currentDate = new Date();
+  // Get the components of the date (year, month, day)
+  var year = currentDate.getFullYear();
+  var month = ('0' + (currentDate.getMonth() + 1)).slice(-2);
+  var day = ('0' + currentDate.getDate()).slice(-2);
+  // Set the value of the #dateInput element
+  $("#dateInput").val(year + '-' + month + '-' + day);
 });
