@@ -141,8 +141,8 @@ $("#ContactForm").on("submit", function (e) {
         if (field.is(":radio")) {
             if (field.is(":checked")) {
                 commande[field.attr("name")] = field.val();
-                console.log("=> " + field.attr("name"));
-                console.log(field.val());
+                // console.log("=> " + field.attr("name"));
+                // console.log(field.val());
             }
         } else if (field.is(":checkbox")) {
             if (field.is(":checked")) {
@@ -150,13 +150,13 @@ $("#ContactForm").on("submit", function (e) {
                   commande[field.attr("name")] = []; // Initialize it as an empty array
                 
                 commande[field.attr("name")].push(field.val());
-                console.log("=> " + field.attr("name"));
-                console.log(field.val());
+                // console.log("=> " + field.attr("name"));
+                // console.log(field.val());
             }
         } else {
             commande[field.attr("name")] = field.val();
-            console.log("=> " + field.attr("name"));
-            console.log(field.val());
+            // console.log("=> " + field.attr("name"));
+            // console.log(field.val());
         }
     }
   });
@@ -209,14 +209,14 @@ $("#ContactForm").on("submit", function (e) {
           console.log(data);
           console.log(jqXHR.status);
           if (jqXHR.status === 200) {
-            myNotif("success", "E-mail envoyé avec succès", 1000);
+            myNotif("success", "E-mail envoyé avec succès", 2000);
           } else {
-            myNotif("error", "Échec de l'envoi de l'e-mail. Code d'état : " + jqXHR.status + errorThrown, 1000);
+            myNotif("error", "Échec de l'envoi de l'e-mail. Code d'état : " + jqXHR.status + errorThrown, 2000);
           }
       },
       error: function (jqXHR, textStatus, errorThrown) {
         console.log("error"+errorThrown);
-        myNotif("error", "Erreur de requête : " + errorThrown, 1000);
+        myNotif("error", "Erreur de requête : " + errorThrown, 2000);
 
       }
   });
