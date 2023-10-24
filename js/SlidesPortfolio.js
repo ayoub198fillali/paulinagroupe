@@ -91,6 +91,7 @@ function fetchImages() {
                 <div class="row">
                 `;
 
+        // Code += `<div class="columnG">`
         images.forEach(function (element, idx) {
           let targetUrl = "";
           if (Local) targetUrl = `${url}/${element.name}`;
@@ -104,7 +105,7 @@ function fetchImages() {
                   </div>
                 `;
         });
-        Code += ` </div>`;
+        Code += ` </div>`; // </div>
         $(`#${id}`).html(`${Code}`);
       })
       .then(() => {

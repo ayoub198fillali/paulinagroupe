@@ -20,13 +20,13 @@
 /*  */
 /* scrollbar */
 /*  */
-html::-webkit-scrollbar {
+*::-webkit-scrollbar {
   width: 0.8rem;
 }
-html::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
   background: transparent;
 }
-html::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background: var(--mainColor);
 }
