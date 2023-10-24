@@ -211,8 +211,8 @@
           </div>
 
           <div class="input">
-            <span>Avez-vous des allergies alimentaires ? <p style="color: red; display: inline">*</p></span>
-            <input type="text" id="allergiesInput" name="Allergies alimentaires :" required placeholder="Exemple : Noix, Gluten au lactose...">
+            <span>Avez-vous des allergies alimentaires ?</span>
+            <input type="text" id="allergiesInput" name="Allergies alimentaires :" placeholder="Exemple : Noix, Gluten au lactose...">
           </div>
                   
         </div>
@@ -342,9 +342,7 @@
           addTarif("tarifs");
 
           // configureMultiSelect();
-          console.log("StartOrder")
           configOrder();
-          console.log("EndOrder")
 
           configureFooter();
           configureToTop();
@@ -638,10 +636,10 @@
               </ul>
             </div>
             `;
-
-          } else {
-            console.log("No decorations available.");
           }
+          //  else {
+          //   // console.log("No decorations available.");
+          // }
 
           if (prices && minimum) {
             // || FOR TARIFS   Define a regex pattern with capturing groups
@@ -770,13 +768,24 @@
       }
 
       function configOrder() {
+
+      // Create a new Date object
+      var currentDate = new Date();
+      // Get the components of the date (year, month, day)
+      var year = currentDate.getFullYear();
+      var month = ('0' + (currentDate.getMonth() + 1)).slice(-2);
+      var day = ('0' + currentDate.getDate()).slice(-2);
+      // Set the value of the #dateInput element
+      $("#dateInput").val(year + '-' + month + '-' + day);
+
+
         let checkboxcakesCode = ``;
         let cakesFormCode = ``;
         
         let len = Object.keys(tarifsCode).length;
         for(let i=0; i < len; i++){
           
-          console.log(`${Object.keys(tarifsCode)[i]}`)
+          // console.log(`${Object.keys(tarifsCode)[i]}`)
           var thisId = Object.keys(tarifsCode)[i].replace(/ /g, "").replace("/","").replace(/-/g,"")
           checkboxcakesCode+=`
           <div class="checkboxitem">

@@ -86,14 +86,53 @@ function theme(mode){
 // }
 
 
-// emailSenderv2.pythonanywhere.com
-// frayfi@g.com
 
+
+let commande = {}
+let msgSend = `
+<html>
+<head>
+
+<style>
+
+:root {
+  --mainColor: #d5a70a;
+}
+.my-divider {
+  display: flex;
+  align-items: center;
+  --my-divider-gap: 1rem; 
+  margin-bottom: 25px;
+  margin-top: 20px;
+}
+.my-divider::before,
+.my-divider::after {
+  content: '';
+  height: 1px;
+  background-color: silver;
+  flex-grow: 1;
+}
+.my-divider::before {
+  margin-right: 20px;
+}
+.my-divider::after {
+  margin-left: 20px;
+}
+.my-divider svg{
+  color: var(--mainColor);
+  width: 20px;
+}
+p span{
+  font-style: italic;
+}
+</style>
+</head>
+
+`;
 // Submit --------------------------------------------------------------
 $("#ContactForm").on("submit", function (e) {
   e.preventDefault();
 
-  myNotif("error", "Pas Encore...", 1000);
   // CMT console.log("Sended");
   
   $("#ContactForm").find(':input').each(function() {
@@ -101,20 +140,92 @@ $("#ContactForm").on("submit", function (e) {
     if (field.is(":visible") && field.attr("name")) {
         if (field.is(":radio")) {
             if (field.is(":checked")) {
+                commande[field.attr("name")] = field.val();
                 console.log("=> " + field.attr("name"));
                 console.log(field.val());
             }
         } else if (field.is(":checkbox")) {
             if (field.is(":checked")) {
+                if (!commande[field.attr("name")])
+                  commande[field.attr("name")] = []; // Initialize it as an empty array
+                
+                commande[field.attr("name")].push(field.val());
                 console.log("=> " + field.attr("name"));
                 console.log(field.val());
             }
         } else {
+            commande[field.attr("name")] = field.val();
             console.log("=> " + field.attr("name"));
             console.log(field.val());
         }
     }
   });
+
+  msgSend += `<body><h3 style="text-align: center; color: #d5a70a;  font-size: 18px;">Commande de ${commande["Nom :"]} ${commande["Prénom :"]}</span></h3>
+  <p style=" font-size: 16px;">C'est : <span style="color: #d5a70a;">${commande["C'est :"]}</span></p>
+  <p style=" font-size: 16px;">Le numéro de téléphone est : <span style="color: #d5a70a;">${commande["Téléphone :"]}</span></p>
+  <p style=" font-size: 16px;">L'Email : <span style="color: #d5a70a;">${commande["Email :"]}</span></p>
+  <p style=" font-size: 16px;">Fait le : <span style="color: #d5a70a;">${commande["Date :"]}</span></p>
+  <p style=" font-size: 16px;">C'est pour le : <span style="color: #d5a70a;">${new Date().toLocaleString()}</span></p>
+  <p style=" font-size: 16px;">Livraison : <span style="color: #d5a70a;">${commande["Livraison :"]}</span></p>
+
+  <p style=" font-size: 16px;">Allergies alimentaires : <span style="color: #d5a70a;">${commande["Allergies alimentaires :"]}</span></p>
+  <p style=" font-size: 16px;">Il y a <span style="color: #d5a70a;">${commande["Commandes :"].length} Commandes :</span></p>
+`
+
+  commande["Commandes :"].forEach(cake => {
+    // msgSend += `${myDivider}`
+    msgSend += `<h3 style="text-align: center; color: #d5a70a;  font-size: 18px;" >Pour La commande: ${cake}</h3>`
+    // msgSend += `${myDivider}`
+    // console.log(`<h1>Pour La commande: ${cake}</h1>`)
+    Object.keys(commande).forEach(title => {
+      // console.log(cake + "  vs  " + title )
+      if(title.includes(cake)){
+        msgSend += `<p style=" font-size: 16px;">${title} <span style="color: #d5a70a;">${commande[title]}</span></p>`
+        // console.log(`<p>${title}${commande[title]}</p>`)
+      }
+    });
+  });
+  msgSend += `</body></html>`
+  msgSend = msgSend.replaceAll("\n","")
+
+  // emailSenderv2.pythonanywhere.com
+  // frayfi@g.com
+  // Define the API endpoint URL
+  var api_url = "https://emailsenderv2.pythonanywhere.com/send-email";  // Replace with the actual URL of your Flask API endpoint
+
+  // Define the email data
+  var email_data = {
+      "recipient_email": "PaulinaGroupe2023",
+      "subject": "Paulina Groupe",
+      "body": msgSend
+  };
+
+  // Send a POST request to the API using jQuery
+  $.ajax({
+      url: api_url,
+      method: "POST",
+      data: email_data,
+      success: function (data, textStatus, jqXHR) {
+          console.log(data);
+          console.log(jqXHR.status);
+          if (jqXHR.status === 200) {
+            myNotif("success", "E-mail envoyé avec succès", 1000);
+          } else {
+            myNotif("error", "Échec de l'envoi de l'e-mail. Code d'état : " + jqXHR.status + errorThrown, 1000);
+          }
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        console.log("error"+errorThrown);
+        myNotif("error", "Erreur de requête : " + errorThrown, 1000);
+
+      }
+  });
+
+
+
+
+
 
   // console.log(myCommand.join(", "));
   // https://mailtrap.io/blog/javascript-send-email/
