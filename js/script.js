@@ -94,7 +94,7 @@ let msgSend = ""
 $("#ContactForm").on("submit", function (e) {
   e.preventDefault();
 
-  msgSend = `<html> <head> <style> :root { --mainColor: #d5a70a; } .my-divider { display: flex; align-items: center; --my-divider-gap: 1rem; margin-bottom: 25px; margin-top: 20px; } .my-divider::before, .my-divider::after { content: ''; height: 1px; background-color: silver; flex-grow: 1; } .my-divider::before { margin-right: 20px; } .my-divider::after { margin-left: 20px; } .my-divider svg{ color: var(--mainColor); width: 20px; } p span{ font-style: italic; } </style> </head>`;
+  msgSend = `<html> <head> <style> :root { --mainColor: #d5a70a; } .my-divider { display: flex; align-items: center; --my-divider-gap: 1rem; margin-bottom: 25px; margin-top: 20px; } .my-divider::before, .my-divider::after { content: ''; height: 1px; background-color: silver; flex-grow: 1; } .my-divider::before { margin-right: 20px; } .my-divider::after { margin-left: 20px; } .my-divider svg{ color: var(--mainColor); width: 20px; } p span{ font-style: italic; color:black; } </style> </head>`;
 
   // CMT console.log("Sended");
   
@@ -128,9 +128,9 @@ $("#ContactForm").on("submit", function (e) {
   <p style=" font-size: 16px;">C'est : <span style="color: #d5a70a;">${commande["C'est :"]}</span></p>
   <p style=" font-size: 16px;">Le numéro de téléphone est : <span style="color: #d5a70a;">${commande["Téléphone :"]}</span></p>
   <p style=" font-size: 16px;">L'Email : <span style="color: #d5a70a;">${commande["Email :"]}</span></p>
-  <p style=" font-size: 16px;">Fait le : <span style="color: #d5a70a;">${commande["Date :"]}</span></p>
-  <p style=" font-size: 16px;">C'est pour le : <span style="color: #d5a70a;">${new Date().toLocaleString()}</span></p>
-  <p style=" font-size: 16px;">Livraison : <span style="color: #d5a70a;">${commande["Livraison :"]}</span></p>
+  <p style=" font-size: 16px;">Fait le : <span style="color: #d5a70a;">${new Date().toLocaleString()}</span></p>
+  <p style=" font-size: 16px;">C'est pour le : <span style="color: #d5a70a;">${commande["Date :"]}</span></p>
+  <p style=" font-size: 16px;">Livraison : <span style="color: #d5a70a;">${$("#livraisonSelect").val()}</span></p>
 
   <p style=" font-size: 16px;">Allergies alimentaires : <span style="color: #d5a70a;">${commande["Allergies alimentaires :"]}</span></p>
   <p style=" font-size: 16px;">Il y a <span style="color: #d5a70a;">${commande["Commandes :"].length} Commandes :</span></p>
