@@ -89,49 +89,12 @@ function theme(mode){
 
 
 let commande = {}
-let msgSend = `
-<html>
-<head>
-
-<style>
-
-:root {
-  --mainColor: #d5a70a;
-}
-.my-divider {
-  display: flex;
-  align-items: center;
-  --my-divider-gap: 1rem; 
-  margin-bottom: 25px;
-  margin-top: 20px;
-}
-.my-divider::before,
-.my-divider::after {
-  content: '';
-  height: 1px;
-  background-color: silver;
-  flex-grow: 1;
-}
-.my-divider::before {
-  margin-right: 20px;
-}
-.my-divider::after {
-  margin-left: 20px;
-}
-.my-divider svg{
-  color: var(--mainColor);
-  width: 20px;
-}
-p span{
-  font-style: italic;
-}
-</style>
-</head>
-
-`;
+let msgSend = ""
 // Submit --------------------------------------------------------------
 $("#ContactForm").on("submit", function (e) {
   e.preventDefault();
+
+  msgSend = `<html> <head> <style> :root { --mainColor: #d5a70a; } .my-divider { display: flex; align-items: center; --my-divider-gap: 1rem; margin-bottom: 25px; margin-top: 20px; } .my-divider::before, .my-divider::after { content: ''; height: 1px; background-color: silver; flex-grow: 1; } .my-divider::before { margin-right: 20px; } .my-divider::after { margin-left: 20px; } .my-divider svg{ color: var(--mainColor); width: 20px; } p span{ font-style: italic; } </style> </head>`;
 
   // CMT console.log("Sended");
   
