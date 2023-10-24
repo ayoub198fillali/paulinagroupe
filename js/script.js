@@ -197,7 +197,6 @@ $("#ContactForm").on("submit", function (e) {
   // Define the email data
   var email_data = {
       "recipient_email": "PaulinaGroupe2023",
-      "subject": "Paulina Groupe",
       "body": msgSend
   };
 
