@@ -3,7 +3,7 @@
 
       // PUBLIC Variables
       let myAllConfigs = [];
-
+      let Local
       async function myFetchConfig() {
         try {
           let myData = await fetch("./JSON/config.json");
@@ -12,7 +12,7 @@
           console.log(`Reason: ${reason}`);
         } finally {
           console.log(`Done`);
-
+          Local = myAllConfigs.local;
           theme($.cookie('mode'))
 
           configPage();
