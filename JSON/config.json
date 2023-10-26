@@ -2,8 +2,8 @@
 
     "local": false, 
     "meta":{
-        "description": "this description",
-        "keywords": "",
+        "description": "Bienvenue chez PAULINA Groupe, votre destination pour des délices sucrés et salés faits maison. Découvrez notre univers gourmand à Athis-Mons, où chaque bouchée est une expérience unique. Notre mission est de vous apporter de la joie à travers des gâteaux délicieux et une décoration évènementielle 100% personnalisée. Que ce soit pour un anniversaire, un mariage ou toute autre célébration, nous sommes là pour créer le gâteau et la décoration de vos rêves. Chez PAULINA Groupe, chaque gâteau raconte une histoire, personnalisée selon vos désirs. Explorez notre vaste sélection de délices sucrés et salés et partagez des moments sucrés et mémorables avec nous.",
+        "keywords": "PAULINA Groupe, délices sucrés, délices salés, gâteaux faits maison, Athis-Mons, décoration évènementielle, anniversaire, mariage, personnalisation de gâteaux, gourmandise",
         "google-site-verification":"lfdGgXsL68RdjKuH8OFsm7NgAZXiDxJNWGGIj4pqIZk",
         "author": "Paulina Groupe"
     },
@@ -25,7 +25,7 @@
         "tarifs",
         "order"
     ],
-    "TimeSliderHome": 5000,
+    "TimeSliderHome": 4000,
     "SpecialTitle": "Notre Gâteau Spécial",
     "SpecialTitleFont": "",
     "SliderProducts": [
